@@ -38,13 +38,31 @@ int main(void){
     for(i=0; i<6; i++){
         for (j=0;j<10;j++){
             if(aposta[j]==gabarito[i]){
-                printf("valor igual %d ", aposta[i]);
+                printf("%d ", aposta[j]);
                 pontuacao++;
             }
         }
     }
 
-    printf("\n\nPontuacao: ", pontuacao);
+    switch (pontuacao)
+    {
+    case 4:
+        printf("Quadra");
+        break;
+    case 5:
+        printf("Quina");
+        break;
+    case 6:
+        printf("Sena");
+        break;
+    
+    default:
+        printf("\n\nTente na proxima!");
+        break;
+    }
+    
+
+    printf("\n\nAceros: %d", pontuacao);
 
     return 0;
 
