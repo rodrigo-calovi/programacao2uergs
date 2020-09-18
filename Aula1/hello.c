@@ -6,13 +6,14 @@
 
 int main(void){
 
-    setlocale(LC_ALL,"portuguese");
+    setlocale(LC_ALL, "Portuguese");
     
+    printf("\n");
     printf("Olá Mundo!");
     printf("\n");
     printf("Hello World!");
     
-    printf("Pressione uma tecla para continuar!");
+    printf("\n\nPressione uma tecla para continuar!\n\n");
     getch();
     
     return 0;
