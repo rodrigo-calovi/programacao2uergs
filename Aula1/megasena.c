@@ -25,7 +25,7 @@ int main(void){
             printf("Digite o valor para o gabarito: ");
             scanf("%d",&valor);
             if(valor<0 || valor >60){
-                printf("Digite valor entre 0 e 60");
+                printf("\nDigite valor entre 0 e 60!\n\n");
             }
         } while(valor<0 || valor>60);    
         gabarito[i]=valor;
