@@ -9,8 +9,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <locale.h>
 
 int main(void){
+
+    setlocale(LC_ALL,"Portuguese");
 
     int gabarito[6];
     int aposta[10];
@@ -87,6 +90,8 @@ int main(void){
         }
         printf("\n\nAcertos: %d", pontuacao);
 
+    printf("\nDigite uma tecla para continuar!");
+    getch();
     return 0;
 
 }
