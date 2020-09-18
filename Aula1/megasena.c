@@ -33,7 +33,7 @@ int main(void){
         for(j=0;j<i;j++){
             while(gabarito[j]==valor){
                 do{
-                    printf("Digite outro valor para o gabarito: ");
+                    printf("Digite outro valor para o gabarito, este ja foi: ");
                     scanf("%d",&valor);
                 } while(valor<0 || valor>60); 
                 gabarito[i]=valor;
@@ -56,7 +56,7 @@ int main(void){
         for(j=0;j<i;j++){
             while(aposta[j]==valor){
                 do{
-                    printf("Digite outro valor para a aposta: ");
+                    printf("Digite outro valor para a aposta, este ja foi: ");
                     scanf("%d",&valor);
                 } while(valor<0 || valor>60); 
                 aposta[i]=valor;
