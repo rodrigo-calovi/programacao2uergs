@@ -46,7 +46,10 @@ int main(void){
     for(i=0; i< 10; i++) {
         do{
             printf("Digite os 10 valores da aposta: ");
-            scanf("%d",&valor);            
+            scanf("%d",&valor);      
+            if(valor<0 || valor >60){
+                printf("\nDigite valor entre 0 e 60!\n\n");
+            }      
         } while(valor<0 || valor>60);        
         aposta[i]=valor;
 
