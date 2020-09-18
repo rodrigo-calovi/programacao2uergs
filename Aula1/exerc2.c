@@ -16,21 +16,44 @@ int main(void){
     int aposta[10];
     int i,j,valor;
     int pontuacao=0;
-
+    
     for(i=0; i< 6; i++) {
         do{
             printf("Digite o valor para o gabarito: ");
             scanf("%d",&valor);
-        } while(valor<0 || valor>60);        
+        } while(valor<0 || valor>60);    
         gabarito[i]=valor;
+        
+        for(j=0;j<i;j++){
+            while(gabarito[j]==valor){
+                do{
+                    printf("Digite outro valor para o gabarito: ");
+                    scanf("%d",&valor);
+                } while(valor<0 || valor>60); 
+                gabarito[i]=valor;
+                j=0;
+            }
+        }
     }
+
     printf("\n-----------\n");
     for(i=0; i< 10; i++) {
         do{
             printf("Digite os 10 valores da aposta: ");
-            scanf("%d",&valor);
+            scanf("%d",&valor);            
         } while(valor<0 || valor>60);        
         aposta[i]=valor;
+
+        for(j=0;j<i;j++){
+            while(aposta[j]==valor){
+                do{
+                    printf("Digite outro valor para a aposta: ");
+                    scanf("%d",&valor);
+                } while(valor<0 || valor>60); 
+                aposta[i]=valor;
+                j=0;
+            }
+        }
     }
 
     printf("\nVerificando resultados\n");
@@ -44,25 +67,25 @@ int main(void){
         }
     }
 
-    switch (pontuacao)
-    {
-    case 4:
-        printf("Quadra");
-        break;
-    case 5:
-        printf("Quina");
-        break;
-    case 6:
-        printf("Sena");
-        break;
-    
-    default:
-        printf("\n\nTente na proxima!");
-        break;
-    }
-    
-
-    printf("\n\nAceros: %d", pontuacao);
+    switch (pontuacao){
+        case 4:
+            printf("Quadra");
+            break;
+        case 5:
+            printf("Quina");
+            break;
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+            printf("Sena");
+            break;
+        default:
+            printf("\n\nTente na proxima!");
+            break;
+        }
+        printf("\n\nAcertos: %d", pontuacao);
 
     return 0;
 
