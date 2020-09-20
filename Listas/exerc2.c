@@ -27,7 +27,7 @@ int main(){
         printf("Digite um valor[%d]: ",i);
         scanf("%d",&vet[i]);
     }
-    printf("Digite o valor a ser procurado: ");
+    printf("\nDigite o valor a ser procurado: ");
     scanf("%d", &valor);
     
     for(i=0;i<TAM;i++){
