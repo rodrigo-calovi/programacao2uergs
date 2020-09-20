@@ -38,8 +38,8 @@ int main(){
     }
 
     printf("\n\n", vet[i]);
-    printf("Digite algo para sair!");
     
+    printf("\nDigite algo para sair!");
     getch();
     return 0;
 }

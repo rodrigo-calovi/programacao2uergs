@@ -3,4 +3,4 @@
 #UERGS
 #PROGRAMAÇÃO 2
 Aula de algoritmos de programação 2
-Revisão
+Revisão e lista de exercícios
