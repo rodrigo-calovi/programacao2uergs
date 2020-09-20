@@ -41,7 +41,7 @@ int main(){
     printf("\nVetor: \n");
     for(i=0;i<TAM;i++){
         if(i<TAM)
-            printf("pos[%d]:%d \t ",i, vet[i]);
+            printf("pos[%d]:%d ",i, vet[i]);
         else 
             printf("pos[%d]:%d",i, vet[i]);
     }
