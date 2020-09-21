@@ -25,7 +25,7 @@ int main(){
     int linha;
     int coluna;
 
-    setlocale(LC_ALL,"Portuguese");
+    //setlocale(LC_ALL,"Portuguese");
 
     for(i=0;i<TAM;i++){
         for(j=0;j<TAM;j++){
