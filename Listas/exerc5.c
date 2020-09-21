@@ -6,26 +6,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-//#include <locale.h>
 
 #define TAM 5
 
 int main(){
 
-   // int vet[5][5]={
-   //                 { 4, 1, 2, 3, 5},
-   //                 {10,13,11,14,12},
-   //                 {22,34,33,14,15},
-   //                 {24,23,16,42,21},
-   //                 {20,17,18,31,27}
-   //               };
     int vet[TAM][TAM];
-    int i,j;
-    int maior;
-    int linha;
-    int coluna;
-
-    //setlocale(LC_ALL,"Portuguese");
+    int i,j,maior,linha,coluna;
 
     for(i=0;i<TAM;i++){
         for(j=0;j<TAM;j++){
