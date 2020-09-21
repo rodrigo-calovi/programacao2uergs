@@ -47,8 +47,8 @@ int main(){
     }
 
     printf("\nMaior: %d ",maior);
-    printf("\nlinha: %d ",linha);
-    printf("\ncoluna: %d ",coluna);
+    printf("\nLinha: %d ",linha);
+    printf("\nColuna: %d ",coluna);
  
     printf("\nDigite algo para sair!");
     getch();
