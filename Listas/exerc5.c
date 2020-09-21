@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include <locale.h>
+//#include <locale.h>
 
 #define TAM 5
 
