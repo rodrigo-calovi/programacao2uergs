@@ -18,6 +18,7 @@
 int main(){
     int vet[]={5,7,6,9,2,8,4,0,3};
     int pos,i=0,next;
+    
     setlocale(LC_ALL,"Portuguese");
 
     pos=1;
