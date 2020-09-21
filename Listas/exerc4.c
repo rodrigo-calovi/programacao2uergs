@@ -5,7 +5,7 @@
 ** Valor       5    7    6    9     2   8    4     0     3 
 ** Assim, a seqüência da leitura seria 1, 5, 2, 7, 4, 9, 3, 6, 8, 0
 ** Faça um algoritmo que seja capaz de ler esse vetor e seguir a trajetória.
-** By Calovi
+** By Rodrigo Calovi
 **/
 
 #include <stdio.h>
