@@ -5,16 +5,16 @@
 #include <stdlib.h>
 #include <conio.h>
 
-#define TAM 6
+#define TAM 4
 
 int main(){
     int i,j,cont=0;
     int MAT1[TAM][TAM] = {
-                            {6,3,74,8,21,42},
-                            {10,2,30,4,11,12},
-                            {1,20,3,60,5,0},
-                            {13,40,7,52,4,9},
-                            {18,32,33,22,11,12},
+                            {6,3,74,8},
+                            {10,2,30,4},
+                            {1,20,3,60},
+                            {13,40,7,52},
+                            {18,32,33,22}
                         };
     
     printf("Valores encontrados:");
