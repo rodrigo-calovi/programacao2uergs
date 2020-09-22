@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include <locale.h>
+
 
 #define TAM 6
 
@@ -29,6 +29,7 @@ int main(){
     }
 
     printf("\nValores maiores que 10: %d",cont);
+    getch();
 
     return 0;
 }
