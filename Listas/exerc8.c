@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <conio.h>
 
-
 #define TAM 6
 
 int main(){
