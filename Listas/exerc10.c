@@ -1,5 +1,5 @@
 /**
-** 8.	Leia uma matriz 6 x 6, conte e escreva quantos valores maiores que 10 ela possui.
+** 10.	Leia uma matriz 4 x 4 e troque os valores da 1ª.linha pelos da 4ª.coluna, vice-e-versa. Escrever ao final a matriz obtida.
 **/
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,27 +8,30 @@
 #define TAM 4
 
 int main(){
-    int i,j,cont=0;
-    int MAT1[TAM][TAM] = {
-                            {6,3,74,8},
-                            {10,2,30,4},
-                            {1,20,3,60},
-                            {13,40,7,52},
-                            {18,32,33,22}
-                        };
-    
-    printf("Valores encontrados:");
-    for(i=0;i<TAM;i++){
-            for(j=0;j<TAM;j++){           
-                if(MAT1[i][j]>10){
-                    printf("%d ",MAT1[i][j]);
-                    cont++;
-                }
-            }
-    }
 
-    printf("\nValores maiores que 10: %d",cont);
+    int i,j, cont=0;
+    int vet[TAM][TAM] = {
+                            {8,7,6,1},
+                            {0,0,0,2},
+                            {0,0,0,3},
+                            {0,0,0,4}
+                        };
+
+            for(cont=1; cont<TAM; cont++){
+                int aux = vet[0][(TAM-1)-cont];
+                vet[0][(TAM-1)-cont] = vet[cont][(TAM-1)];
+                vet[cont][(TAM-1)] = aux;
+            }
+    
+    for(i=0;i<TAM;i++){
+        for(j=0;j<TAM;j++){           
+            printf("%d ",vet[i][j]);
+        }                
+        printf("\n");
+    }
+    
+    printf("Pressione uma tecla para sair!");
     getch();
-    )
+    
     return 0;
 }
