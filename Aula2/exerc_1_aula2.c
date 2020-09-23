@@ -17,14 +17,14 @@
 #include <locale.h>
 
 unsigned int menu();
-unsigned int digitaValor();
-unsigned int areaQuadrado();
-unsigned int areaRetangulo();
-unsigned int areaTriangulo();
+float digitaValor();
+float areaQuadrado();
+float areaRetangulo();
+float areaTriangulo();
 
 int main(){
     
-    unsigned int op,lado1;
+    int op;
 
     setlocale(LC_ALL, "Portuguese");  
     
@@ -36,17 +36,17 @@ int main(){
             
         case 1:
             printf("\n\nÁrea do quadrado: \n");
-            printf("\nÁrea: %u",areaQuadrado());
+            printf("\nÁrea: %.2f",areaQuadrado());
             printf("\n\n");
             break;
         case 2:
             printf("\n\nÁrea do retângulo: \n");
-            printf("\nÁrea: %u",areaRetangulo());
+            printf("\nÁrea: %.2f",areaRetangulo());
             printf("\n\n");
             break;
         case 3:
             printf("\n\nÁrea do triangulo: \n");
-            printf("\nÁrea: %u",areaTriangulo());
+            printf("\nÁrea: %.2f",areaTriangulo());
             printf("\n\n");
             break;
         default:
@@ -76,36 +76,36 @@ unsigned int menu(){
     return op;
 }
 
-unsigned int digitaValor(){
-    int lado;
+float digitaValor(){
+    float lado;
     do{
         printf("#: ");
-        scanf("%u", &lado);
+        scanf("%f", &lado);
     }while (lado<=0);
     return lado;
 }
 
-unsigned int areaQuadrado(){
-    printf("\nLado: \n");
-    int lado = digitaValor();
+float areaQuadrado(){
+    printf("Lado: \n");
+    float lado = digitaValor();
     return lado*lado;
 }
 
 
-unsigned int areaRetangulo(){
-    printf("\nLado: \n");
-    int lado1 = digitaValor();
+float areaRetangulo(){
+    printf("Lado: \n");
+    float lado1 = digitaValor();
     printf("Altura: \n");
-    int lado2 = digitaValor();
+    float lado2 = digitaValor();
     return lado1*lado2;
 }
 
 
-unsigned int areaTriangulo(){
-    printf("\nBase:\n");
-    int lado1 = digitaValor();
+float areaTriangulo(){
+    printf("Base:\n");
+    float base = digitaValor();
     printf("Altura:\n");
-    int lado2 = digitaValor();
-    return (lado1*lado2)/2;
+    float altura = digitaValor();
+    return (base*altura)/2.0;
 }
 
