@@ -11,11 +11,20 @@
 
 int main(void){
     
-    int vetX[] = {0,3,5,6};
-    int vetY[] = {2,4,9,8};
-    int prodScalar = 0;
-    int i,j;
+    //int vetX[] = {0,3,5,6};
+    //int vetY[] = {2,4,9,8};
+    int vetX[TAM];
+    int vetY[TAM];
+    int i,j,prodScalar = 0;
 
+    for(i=0;i<TAM;i++){
+        printf("Digie o valor[%d] para o vetor X: ",i);
+        scanf("%d",&vetX[i]);
+        printf("Digie o valor[%d] para o vetor Y :",i);
+        scanf("%d",&vetY[i]);
+        printf("\n");
+    }
+    
     printf("\nVetor X: ");
     for(i=0; i<TAM; i++){
         if(i<3)
