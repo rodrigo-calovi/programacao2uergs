@@ -9,6 +9,8 @@
 * Área_quadrado = lado * lado
 * Área_retângulo = lado1 * lado2
 * Área_triângulo = (lado 1 * lado 2)/2
+*
+* Resolução by Rodrigo Calovi
 */
 
 #include <stdio.h>
