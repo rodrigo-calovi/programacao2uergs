@@ -31,6 +31,7 @@ int diferencaHorario(int hora1, int hora2);
 float transfHora(int segundos);
 float transfMin(int segundos);
 float transfSeg(int segundos);
+void imprimeSegundos(int valor);
 
 int dadosValidos = FALSE;
 
@@ -38,7 +39,7 @@ int main(){
     
     int hora, minuto, segundo;
     int dados[LINHA][COLUNA];
-    int i, tempoSeg;
+    int i, tempoSeg, tempoSegundos;
     
     setlocale(LC_ALL, "Portuguese");  
     
@@ -64,7 +65,9 @@ int main(){
         tempoSeg=diferencaHorario(dados[0][3],dados[1][3]);
     }
 
-    printf("\n%02.0f:%02.0f:%02.f",transfHora(tempoSeg),transfMin(tempoSeg),transfSeg(tempoSeg));
+    printf("\nDiferença de: %02.0f:%02.0f:%02.f",transfHora(tempoSeg),transfMin(tempoSeg),transfSeg(tempoSeg));
+    
+    imprimeSegundos(tempoSeg);
 
     return 0;
 }
@@ -110,5 +113,9 @@ int diferencaHorario(int hora1, int hora2){
     return hora1-hora2;
 }
 
+void imprimeSegundos(int valor){
+    int segundos = transfHora(valor)*3600+transfMin(valor)*60+transfSeg(valor);
+    printf("\nOu de %d segundos", segundos);
+}
 
 
