@@ -26,7 +26,7 @@
 #define COLUNA 4
 
 int verificaHora(int hora, int minuto, int segundo);
-float transf2Seg(int hora, int min, int seg);
+int transf2Seg(int hora, int min, int seg);
 int diferencaHorario(int hora1, int hora2);
 float transfHora(int segundos);
 float transfMin(int segundos);
@@ -79,7 +79,7 @@ int verificaHora(int hora, int minuto, int segundo){
     return FALSE;
 }
 
-float transf2Seg(int hora, int min, int seg){
+int transf2Seg(int hora, int min, int seg){
     return (hora*3600.0 + min*60.0 + seg*1.0);
 }
 
