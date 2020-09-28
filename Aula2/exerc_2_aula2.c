@@ -66,9 +66,17 @@ int main(){
     }
 
     printf("\nDiferença de: %02.0f:%02.0f:%02.f",transfHora(tempoSeg),transfMin(tempoSeg),transfSeg(tempoSeg));
-    
+   
+    //printf("\n%f ",transfHora(tempoSeg));
+    //printf("\n%f ",transfMin(tempoSeg));
+    //printf("\n%d ",transfSeg(tempoSeg));
+    //printf("\n%d ",tempoSeg);
     imprimeSegundos(tempoSeg);
+    
+        
 
+    printf("\nPressione uma tecla para sair!");
+    getch();
     return 0;
 }
 
@@ -87,7 +95,7 @@ int transf2Seg(int hora, int min, int seg){
 }
 
 float transfHora(int segundos){
-    return segundos/3600.0;
+    return (segundos/3600.0)<1? 0 : segundos/3600.0 ;
 }
 
 float transfMin(int segundos){
@@ -96,7 +104,7 @@ float transfMin(int segundos){
         aux = 0;
         return aux;
     } else 
-        return aux;
+        return aux<1?0:aux;
 }
 
 float transfSeg(int segundos){
@@ -114,8 +122,7 @@ int diferencaHorario(int hora1, int hora2){
 }
 
 void imprimeSegundos(int valor){
-    int segundos = valor;
-    printf("\nOu de %d segundos", segundos);
+    printf("\nOu de %2d segundos", valor);
 }
 
 
