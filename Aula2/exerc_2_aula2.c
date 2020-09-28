@@ -87,11 +87,11 @@ int transf2Seg(int hora, int min, int seg){
 }
 
 float transfHora(int segundos){
-    return (int)segundos/3600.0;
+    return segundos/3600.0;
 }
 
 float transfMin(int segundos){
-    float aux = ((float)(segundos/3600.0)-(segundos/3600))*60;
+    float aux = (segundos/3600.0-(segundos/3600))*60;
     if(aux>59.5){
         aux = 0;
         return aux;
@@ -100,7 +100,7 @@ float transfMin(int segundos){
 }
 
 float transfSeg(int segundos){
-    float aux = ((float)(segundos/3600.0)-(segundos/3600))*60;
+    float aux = (segundos/3600.0-segundos/3600)*60;
     aux = (aux - (int)aux)*60;
     if(aux>59.5){
         aux = 0;
@@ -114,7 +114,7 @@ int diferencaHorario(int hora1, int hora2){
 }
 
 void imprimeSegundos(int valor){
-    int segundos = transfHora(valor)*3600+transfMin(valor)*60+transfSeg(valor);
+    int segundos = valor;
     printf("\nOu de %d segundos", segundos);
 }
 
