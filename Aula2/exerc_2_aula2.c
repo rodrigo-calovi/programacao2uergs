@@ -39,7 +39,7 @@ int main(){
     
     int hora, minuto, segundo;
     int dados[LINHA][COLUNA];
-    int i, tempoSeg, tempoSegundos;
+    int i, tempoSeg;
     
     setlocale(LC_ALL, "Portuguese");  
     
