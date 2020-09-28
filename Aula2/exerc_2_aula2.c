@@ -67,13 +67,7 @@ int main(){
 
     printf("\nDiferença de: %02.0f:%02.0f:%02.f",transfHora(tempoSeg),transfMin(tempoSeg),transfSeg(tempoSeg));
    
-    //printf("\n%f ",transfHora(tempoSeg));
-    //printf("\n%f ",transfMin(tempoSeg));
-    //printf("\n%d ",transfSeg(tempoSeg));
-    //printf("\n%d ",tempoSeg);
-    imprimeSegundos(tempoSeg);
-    
-        
+    imprimeSegundos(tempoSeg);     
 
     printf("\nPressione uma tecla para sair!");
     getch();
