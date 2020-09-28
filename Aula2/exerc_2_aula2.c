@@ -12,7 +12,7 @@
 *
 * Resolução by Rodrigo Calovi
 *
-* 
+*  comparação com: https://www.calculadora-online.xyz/calculadora-horario.php
 */
 
 #include <stdio.h>
