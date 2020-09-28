@@ -22,6 +22,7 @@
 
 #define TRUE 1
 #define FALSE 0
+
 #define LINHA 2
 #define COLUNA 4
 
