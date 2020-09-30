@@ -10,32 +10,24 @@
  * Data: 30/09/2020
  **/ 
  
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
+
 
 float calculoN(int n);
 
 float valor=0;
 
 int main(){
-
-    setlocale(LC_ALL,"portuguese");
     int n=0;
-
-    printf("\nDigite o valor de 'n' para cálculo de 2^n: ");
+    printf("\nDigite o valor de 'n' para calculo de 2^n: ");
     scanf("%d",&n);
-    
-    printf("\nO valor de 2^n é: ");
-    
+    printf("\nO valor de 2^%d é: ",n);
     if(n<0){
         n=n*-1;
         printf("%.8f\n\n", 1/calculoN(n) );
-    }
-    else 
+    } else 
         printf("%.0f\n\n",calculoN(n));
-    
     return 0;
 }
 
