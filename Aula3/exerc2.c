@@ -13,7 +13,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <conio.h>
 #include <locale.h>
 
 float calculoN(int n);
@@ -24,7 +23,6 @@ float valor=0;
 int main(){
 
     setlocale(LC_ALL,"portuguese");
-
     int n=0;
 
     printf("\nDigite o valor de 'n' para cálculo de 2^n: ");
@@ -37,14 +35,9 @@ int main(){
         n=n*-1;
         printf("%.8f\n\n",calculoNneg(n));
     }
-
-    //printf("\n\nPressione uma tecla para continuar!");
-    //getch();
-    //system("pause");
     
     return 0;
 }
-
 
 float calculoN(int n){
     if(n>1)
@@ -55,7 +48,6 @@ float calculoN(int n){
         valor = 1;
     return valor;
 }
-
 
 float calculoNneg(int n){ 
     valor = valor + calculoN(n-1);
