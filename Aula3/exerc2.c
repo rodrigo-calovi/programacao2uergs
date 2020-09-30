@@ -1,18 +1,13 @@
 /**
  * By Rodrigo Britto Calovi
  * Exercício 2 da aula 3.
- * 
  * Implemente uma função recursiva para computar o valor de 2n
- * 
- * Aula de Algorítmos e programação 2
  * Recursividade
- * 
  * Data: 30/09/2020
  **/ 
  
 #include <stdio.h>
 #include <stdlib.h>
-
 
 float calculoN(int n);
 
