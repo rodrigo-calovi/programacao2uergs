@@ -16,7 +16,6 @@
 #include <locale.h>
 
 float calculoN(int n);
-float calculoNneg(int n);
 
 float valor=0;
 
@@ -29,12 +28,13 @@ int main(){
     scanf("%d",&n);
     
     printf("\nO valor de 2^n é: ");
-    if(n>=0)
-        printf("%.1f\n\n",calculoN(n));
-    else{
+    
+    if(n<0){
         n=n*-1;
-        printf("%.8f\n\n",calculoNneg(n));
+        printf("%.8f\n\n", 1/calculoN(n) );
     }
+    else 
+        printf("%.0f\n\n",calculoN(n));
     
     return 0;
 }
@@ -47,9 +47,4 @@ float calculoN(int n){
     else if(n==0)
         valor = 1;
     return valor;
-}
-
-float calculoNneg(int n){ 
-    valor = valor + calculoN(n-1);
-    return 1/valor;
 }
