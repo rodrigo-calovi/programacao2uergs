@@ -20,7 +20,7 @@ int main(){
     printf("\nO valor de 2^%d é: ",n);
     if(n<0){
         n=n*-1;
-        printf("%.16f\n\n", 1/calculoN(n) );
+        (n<2) ? printf("%.2f\n\n", 1/calculoN(n)) : printf("%.10f\n\n", 1/calculoN(n));
     } else 
         printf("%.0f\n\n",calculoN(n));
     return 0;
