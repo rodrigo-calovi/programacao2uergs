@@ -19,7 +19,7 @@ int main(void) {
     //void troca(int *, int *); //não é bom
     printf("Entre com dois dados inteiros: ");
     scanf("%d %d",&dado1, &dado2);
-    troca(&dado1, &dado2); //colocar & para pessar endereço
+    troca(&dado1, &dado2); //colocar & para passar endereço
     printf("Dados em ordem crescente: %d \t %d \n", dado1, dado2);
     return 0;
 }
