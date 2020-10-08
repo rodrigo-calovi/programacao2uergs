@@ -18,7 +18,7 @@ int main () {
     int *num;
     while(i<3){
         do {        
-            printf("Digite um numero: [%d] ",i);
+            printf("Digite um numero de 3 digitos: [%d] ",i);
             scanf("%d",&num[i]);
         }while(*num<100 || *num >999);
         i++;
