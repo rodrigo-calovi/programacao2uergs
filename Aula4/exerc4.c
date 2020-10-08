@@ -12,7 +12,6 @@
 
 #define TAM 3
 void inverteDigito(int *num);
-void inverteOrdem(int *num);
 
 int main () {
     int i = 0;
