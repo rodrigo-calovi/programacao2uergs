@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include  <conio.h>
 
 #define TAM 3
 void inverteDigito(int *num);
@@ -17,6 +16,7 @@ void inverteOrdem(int *num);
 int main () {
     int i = 0;
     int *num;
+
     while(i<3){
         do {        
             printf("Digite um numero: [%d] ",i);
@@ -25,11 +25,10 @@ int main () {
         i++;
     }
     inverteDigito(num);
+    //inverteOrdem(num); // descomentar para inverter ordem de entrada
     for(i=0; i<TAM; i++){
         printf("%d ",*(num+i));
     }
-    printf("Digite uma tecla para sair!");
-    getch();
 
     return 0;
 }
@@ -37,6 +36,7 @@ int main () {
 void inverteDigito(int *num){
     int i = TAM;
     int numInvert;
+           
     while (i--) {
         numInvert = 0;
         while ( *(num+i) > 0 ){
@@ -46,3 +46,19 @@ void inverteDigito(int *num){
         *(num+i)=numInvert;
     }
 }
+
+void inverteOrdem(int *num){
+    int i;
+    int vet[TAM];
+    for(i=0; i<TAM; i++){
+        vet[i]=*(num+i);
+        //printf("%d ",vet[i]);
+    }
+    //inverte do vetor
+    for(i=0; i<TAM; i++){
+        *(num+i) = vet[(TAM-1)-i];
+        //printf("%d ",vet[i]);
+    }
+      
+}
+
