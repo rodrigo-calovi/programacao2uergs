@@ -24,11 +24,12 @@ int main () {
         }while(*num<100 || *num >999);
         i++;
     }
+    printf("\nDigitos trocados: ");
     inverteDigito(num);
     for(i=0; i<TAM; i++){
         printf("%d ",*(num+i));
     }
-    printf("Digite uma tecla para sair!");
+    printf("\n\nDigite uma tecla para sair!");
     getch();
 
     return 0;
