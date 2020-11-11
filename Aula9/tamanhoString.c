@@ -30,7 +30,7 @@ int main (){
         }
     }
      printf("\nA letra '%c', se repete %d vezes.", letra, qtRepeticao);
-     printf("\n\nNome: %s", nome);
+     printf("\n\nNome: %s\n\n", nome);
 
     return 0;
 }
