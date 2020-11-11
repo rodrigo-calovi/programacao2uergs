@@ -9,17 +9,17 @@ int main (){
     char nome[15];
     char letra;
     int i, tamanho, qtRepeticao=0;
-
-    printf("Digite um nome: ");
+    system("cls");
+    printf("\nDigite um nome: ");
     scanf("%s", &nome);
     fflush(stdin);
     
-    printf("Nome: %s", nome);
+    printf("\nNome: %s", nome);
 
     tamanho=tamanhoVetor(nome);
     printf("\nTamanho do nome: %d", tamanho );
 
-    printf("\nDigite a letra a substituir: ");
+    printf("\n\nDigite a letra a substituir: ");
     letra = getchar();
     fflush(stdin);
 
