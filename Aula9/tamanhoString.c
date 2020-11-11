@@ -23,7 +23,7 @@ int main (){
     letra = getchar();
     fflush(stdin);
 
-    for(i=0; i<tamanhoVetor(nome); i++){
+    for(i=0; i<tamanho; i++){
         if(nome[i]==letra){
            nome[i]='*';
            qtRepeticao += 1;
