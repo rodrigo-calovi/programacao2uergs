@@ -29,8 +29,8 @@ int main (){
            qtRepeticao += 1;
         }
     }
-     printf("Letra '%c', se repete %d vezes.", letra, qtRepeticao);
-     printf("\nNome: %s", nome);
+     printf("\nA letra '%c', se repete %d vezes.", letra, qtRepeticao);
+     printf("\n\nNome: %s", nome);
 
     return 0;
 }
