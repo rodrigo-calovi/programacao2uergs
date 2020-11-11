@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int tamanhoVetor(char vet[]);
+int tamanhoOcupadoVetor(char vet[]);
 
 int main (){
     char nome[15];
@@ -14,7 +14,7 @@ int main (){
     
     printf("\nNome: %s", nome);
 
-    tamanho=tamanhoVetor(nome);
+    tamanho=tamanhoOcupadoVetor(nome);
     printf("\nTamanho do nome: %d", tamanho );
 
     printf("\n\nDigite a letra a substituir: ");
@@ -27,12 +27,14 @@ int main (){
         }
     }
      printf("\nA letra '%c', se repete %d vezes.", letra, qtRepeticao);
-     printf("\n\nNome: %s\n\n", nome);
+     printf("\n\nNome: %s\n", nome);
+
+    printf("\nTamanho Vetor: %d\n\n", sizeof(nome));
 
     return 0;
 }
 
-int tamanhoVetor(char *vet){
+int tamanhoOcupadoVetor(char *vet){
     int size = 0;
     while(*vet++){
         size++;
