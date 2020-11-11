@@ -21,7 +21,6 @@ int main (){
 
     printf("\n\nDigite a letra a substituir: ");
     letra = getchar();
-    fflush(stdin);
 
     for(i=0; i<tamanho; i++){
         if(nome[i]==letra){
