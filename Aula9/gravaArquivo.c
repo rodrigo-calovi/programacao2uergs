@@ -1,7 +1,7 @@
 /**************************************************************************
 * Programa para criar arquivo tipo texto e gravar nome de pessoa e idade
 * A leitura e gravação de pessoas no arquivo vai até que  o nome fim seja * * digitado pelo teclado
-*
+*   Prof. Margrit - UERGS
 **************************************************************************/
 
 #include <stdio.h>
