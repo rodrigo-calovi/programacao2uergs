@@ -23,7 +23,7 @@ int main() {
 
 /**
  * imprime caracter
- * @return int
+ * @return char
  **/
 char imprimeCaracter(char letra){
     return putchar(letra);
