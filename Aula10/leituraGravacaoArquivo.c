@@ -15,7 +15,6 @@ int main(void){
 
     if ((entrada = fopen("entrada.txt", "r")) == NULL) {
         printf("ERRO ao abrir arquivo!");
-
     } else if ((saida = fopen("saida.txt", "w")) == NULL) {
         printf("ERRO ao abrir arquivo!\n");
     } else {
