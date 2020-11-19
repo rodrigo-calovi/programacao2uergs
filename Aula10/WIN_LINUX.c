@@ -11,19 +11,21 @@
 
 #endif
 
+
+
 #define TAM 5
+
+
 
 int main(int argc, char *argv[]) {
 
     #ifdef OS_Windows
         /* Codigo Windows */
         system("cls");
-
     #else
         /* Codigo GNU/Linux */
         system("clear");
     #endif
-
 
     return 0;
 }
