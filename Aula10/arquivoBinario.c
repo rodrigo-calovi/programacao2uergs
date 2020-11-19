@@ -27,19 +27,18 @@ int main() {
     //fwrite(buffer, tamanho, contador, ponteiro);
     fwrite(A,sizeof(A),1,arquivo);
     fclose(arquivo);
-
+    //atribuindo valores aleatorios 
     A[0]=101;
     A[1]=102;
     A[2]=103;
     A[3]=104;
     A[4]=105;
-
     printf("\nNumeros memoria: ");
     for(i=0;i<TAM;i++){
         printf("%2d ", A[i]);
     }
 
-    //LEITURA ARQUIVO
+    //LEITURA ARQUIVO substituindo os numeros inseridos aleatoriamente
     arquivo = fopen("matint.dat", "rb");
     fread(A,sizeof(A),1, arquivo);
 
