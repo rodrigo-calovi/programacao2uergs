@@ -134,7 +134,6 @@ void gravarArquivo(int vetPar[], int vetImpar[], int qtPar, int qtImpar){
 
 
 /**
- * 
  * @param vet - vetor qualquer (int)
  * @param qt - quantidade qualquer (int)
  * @param nomeArquivo - nome para o arquivo (char[])
