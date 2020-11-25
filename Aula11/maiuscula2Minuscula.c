@@ -1,6 +1,6 @@
 /**
  * By Rodrigo Calovi
- * Transformação de palavra maiuscula para minuscula
+ * Transformação de palavra maiuscula para minuscula e vice versa
  */
 
 #include <stdio.h>
