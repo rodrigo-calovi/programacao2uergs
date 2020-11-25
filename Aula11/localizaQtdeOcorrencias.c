@@ -14,7 +14,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#define TAM 20
+#define TAM 15
 void minuscula(char palavra[]);
 void maiuscula(char palavra[]);
 int localizaCaracter(char palavra[], char letra);
