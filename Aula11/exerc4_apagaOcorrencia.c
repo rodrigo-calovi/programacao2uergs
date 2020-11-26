@@ -14,8 +14,8 @@
 #include <string.h>
 
 #define TAM 15
-
-void localizaCaracter2apagar(char *vet, char letra);
+void localizaCaracter(char *vet, char letra);
+int localizaCaracter2apagar(char *vet, char letra);
 
 int main() {
 
@@ -28,7 +28,7 @@ int main() {
 
     printf("\nPalavra: %s", palavra);
 
-    localizaCaracter2apagar(palavra, letra);
+    printf("Quantidade Localizada: %d", localizaCaracter2apagar(palavra, letra));
     printf("\nPalavra com '%c' retirado: %s", letra, palavra);
     printf("\n\n");
 
@@ -56,18 +56,21 @@ void localizaCaracter(char palavra[], char letra){
 }
 
 
-void localizaCaracter2apagar(char vet[], char letra) {
+int localizaCaracter2apagar(char vet[], char letra) {
 
     char auxVet[TAM];
-    int i,pos=0;
+    int i,pos=0, cont=0;
 
     for(i=0;i<strlen(vet);i++){
         if(vet[i]!=letra){
            auxVet[pos]=vet[i];
            pos++;
+        } else { 
+            cont++;
         }
     }
     strcpy(vet,auxVet); //copia para vetor original com a letra retirada do vetor original
     //printf("\nPalavra sem a letra '%c' : %s", letra, vet);
+    return cont;
 }
 
