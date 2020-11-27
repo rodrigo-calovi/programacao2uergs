@@ -38,8 +38,7 @@ int main() {
 
 int localizaCaracter(char palavra[], char letra){
     int cont=0,i;
-    char *ret;
-    for(i=0;i<strlen(palavra);i++){
+      for(i=0;i<strlen(palavra);i++){
         if(palavra[i]==letra){
             cont++;
         }

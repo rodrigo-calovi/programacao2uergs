@@ -1,18 +1,11 @@
-/**
- * Discente: Rodrigo Britto Calovi
- * Engenharia da Computação
- * UERGS - Universidade Estadual do Rio Grande do Sul
- * Docente: prof. Dra. Margrit Reni Krug
- *
- * Exercício
- * 5)	Crie uma função que mostra os caracteres de uma string são repetidos.
- *
- */
 
 #include <stdio.h>
 #include <string.h>
 
 int localizaCaracter2apagar(char vet[], char letra);
+
+#define FALSE 0
+#define TRUE 1
 
 #define TAM 20
 
@@ -20,10 +13,11 @@ int main() {
 
     char palavra[TAM];
     char vetAux[TAM];
-    int i, *qtCaracter;
+    int i, qtCaracter;
     int qtAchado;
+    int isAchado = FALSE;
 
-    printf("Digite um texto: ");
+    printf("Digite uma palavra: ");
     scanf("%s", &palavra);
     fflush(stdin);
 
@@ -31,16 +25,20 @@ int main() {
 
      for(i=0;i<(int)qtCaracter-1;i++){
          qtAchado = localizaCaracter2apagar(vetAux, palavra[i]);
-         if(qtAchado>1)
+         if(qtAchado>1){
              printf("\nLocalizadas '%d' letras '%c' na palavra.", qtAchado, palavra[i]);
-         else {
-             printf("");
-         }
+             isAchado = TRUE;
+        } else {
+             //printf("");
+        }
 
          qtCaracter = strlen(palavra);
 
      }
 
+    if(!isAchado){
+        printf("Nao encontrado letras repetidas!");
+    }
 
     printf("\n");
     return 0;
