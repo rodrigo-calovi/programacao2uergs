@@ -37,7 +37,7 @@ int main() {
      }
 
     if(!isAchado){
-        printf("Nao encontrado letras repetidas!");
+        printf("\nNao encontrado letras repetidas!\n");
     }
 
     printf("\n");
@@ -46,6 +46,7 @@ int main() {
 
 int localizaCaracter2apagar(char vet[], char letra) {
 
+    
     char auxVet[strlen(vet)];
     int i,pos=0, cont=0;
 
