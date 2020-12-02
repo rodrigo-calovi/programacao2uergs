@@ -20,7 +20,7 @@ typedef struct {
     float somaGeral;
 } alunos;
 
-#define TAM 3
+#define TAM 10
 
 int AlunoMaiorNotaP1 (alunos aluno[]); 
 int AlunoMaiorSomaGeral (alunos aluno[]);
