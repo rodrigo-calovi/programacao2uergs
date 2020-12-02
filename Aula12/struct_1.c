@@ -14,7 +14,7 @@ typedef struct dado1{
 } dados;
 //typedef struct dados dados;
 
-#define TAM 3
+#define TAM 10
 
 int main() {
 
