@@ -147,8 +147,6 @@ int AlunoMenorSomaGeral (alunos aluno[TAM]) {
 void situacao(alunos aluno[TAM]){
 
     int i,j;
-    int pos=0;
-    float maiorSoma=0;
     int tamVetorNotas = sizeof(aluno->p)/sizeof(aluno->p[0]);
     int situacao;
     float media;
