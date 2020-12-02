@@ -148,7 +148,6 @@ void situacao(alunos aluno[TAM]){
 
     int i,j;
     int tamVetorNotas = sizeof(aluno->p)/sizeof(aluno->p[0]);
-    int situacao;
     float media;
 
     for(i=0;i<TAM;i++) {
