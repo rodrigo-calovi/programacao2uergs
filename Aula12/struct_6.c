@@ -83,7 +83,6 @@ void flush_in(){
 }
 
 int menu(){
-    //system("cls");
     int op;
     printf("\nMenu\n");
     printf("\n1 - Cadastrar compromissos");
@@ -116,22 +115,16 @@ int cadastrarCompromissos(Tagenda t_agenda[], int cont){
         scanf("%[^\n]", &t_agenda[cont].compromisso);
         flush_in();
 
-        //printf("\nCadastro: [%d]",cont);
-
-
         cont = cont +1;
-
 
     } else {
         printf("\nRegistro cheio!\n");
     }
 
-
-
-
     return cont;
 }
 
+//Pesquisa compromissos
 void pesquisaCompromisso(Tagenda t_agenda[TAM], int mes, int ano, int cont){
     int i, qt=0;
     for(i=0;i<cont;i++){
