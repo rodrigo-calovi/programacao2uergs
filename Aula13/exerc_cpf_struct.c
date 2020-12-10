@@ -48,12 +48,8 @@ int main(){
         op=menu();
         switch (op) {
             case 1:
-                if(pos<TAMClientes){
-                    isCPF = validaCPF(numCPF);
-                    isCPF ? pos=cadastraCliente(numCPF,t_clientes,pos) : printf("CPF nao eh valido!");
-                } else {
-                    printf("cadastro lotado!");
-                }
+                isCPF = validaCPF(numCPF);
+                isCPF ? pos=cadastraCliente(numCPF,t_clientes,pos) : printf("CPF nao eh valido!");
                 break;
             
             case 2:
