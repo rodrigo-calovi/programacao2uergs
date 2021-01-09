@@ -71,9 +71,9 @@ void imprimeReverso(char string[TAM]){
     int i;
     char stringAux;
     for(i = 0; i < (strlen(string)/2); i++){
-        stringAux = string[i]; //armazena o character inicial
-        string[i] = string[strlen(string) - i]; //Troca o character da ponta oposta
-        string[strlen(string) - i] = stringAux; //Armazena o character inicial no buffer
+        stringAux = string[i]; //guarda character inicial
+        string[i] = string[strlen(string) - i]; //Troca character oposto
+        string[strlen(string) - i] = stringAux; //Armazena character em string
     }
     printf("\n%s",string);
 }
