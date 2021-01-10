@@ -4,28 +4,29 @@
 int main(){
 
     //PUTS
-    puts("Luana"); //escreve na tela em forma de string
+    puts("Rodrigo"); //escreve na tela em forma de string
 
     //PUTC
     FILE *arquivo;
     arquivo = fopen("teste.txt","w+t");
-    putc('L',arquivo); //escreve 'L' no arquivo
-    putc('u',arquivo);
+    putc('C',arquivo); //escreve 'C' no arquivo
     putc('a',arquivo);
-    putc('n',arquivo);
-    putc('a',arquivo);
+    putc('l',arquivo);
+    putc('o',arquivo);
+    putc('v',arquivo);
+    putc('i',arquivo);
     putc(32,arquivo); //32 espaco ou ' ';
     putc('S',arquivo);
     fclose(arquivo);
     
     //PUTCHAR
-    putchar('A'); //escreve 'A' na tela
-    putchar('n');
-    putchar('a');
+    putchar('R'); //escreve 'R' na tela
+    putchar('B');
+    putchar('C');
 
     //FPUTS
     arquivo = fopen("teste.txt","at");
-    fputs("\nBatatinha",arquivo); //escreve batatinha no arq
+    fputs("\nchocolate",arquivo); //escreve batatinha no arq
     fclose(arquivo);
     
     
@@ -44,13 +45,11 @@ int main(){
 
     //FPUTCHAR
     fputchar(' ');//escreve 
-    fputchar('j');//escreve 'J' na tela
-    fputchar('u');
-    fputchar('j');
-    fputchar('u');
-    fputchar('b');
-    fputchar('a');
-
+    fputchar('t');//escreve 't' na tela
+    fputchar('e');
+    fputchar('s');
+    fputchar('t');
+    fputchar('e');
     
     return 0;
 }

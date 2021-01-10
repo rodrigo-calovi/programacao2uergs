@@ -20,7 +20,7 @@ int main(){
     FILE *arquivo;
     int c;
     arquivo = fopen("teste.txt","wt");
-    fprintf(arquivo,"-Sperling-");
+    fprintf(arquivo,"-Calovi-");
     //fputc('\0',arquivo);
     fclose(arquivo);
     arquivo = fopen("teste.txt","rt");
