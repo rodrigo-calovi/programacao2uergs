@@ -2,14 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
   
-#ifdef WIN32  //se for windows
-  #define limpa_tela system("cls") //limpa tela
-  #define espera sleep(500) //tempo de delay
-#else //senão, ex.: linux
-  #define limpa_tela system("/usr/bin/clear") //limpa tela
-  #define espera sleep(1) //tempo de delay
-#endif
-  
+void quick_sort (int *a, int n);
+
 int main(){
   //declaração de variáveis
   int nPos=0, nAux=0;
@@ -32,13 +26,14 @@ int main(){
     nOrig[nAux]=nVetor[nAux];
   }
   
-  limpa_tela; //limpando a tela
+  system("cls"); //limpando a tela
   
-  while((nOpc<=0)||(nOpc>=4)){
+  while((nOpc<=0)||(nOpc>=5)){
     printf("\n > Menu:");
     printf("\n  1. Selecao  | Selection Sort");
     printf("\n  2. Insercao | Inserction Sort");
     printf("\n  3. Troca    | Bubble Sort");
+    printf("\n  4. Rapida   | Quick Sort");
     printf("\n > Resposta: ");
     scanf("%d",&nOpc);
   }
@@ -47,11 +42,10 @@ int main(){
   int i, j, t, m;
   
   if(nOpc==1){
-    //Seleção
+    //Seleção - Selection Sort
     for(nInd=0; nInd<=nPos-1; nInd++){
       for(nAux=0;nAux<=nPos-1;nAux++){
         printf("[%d]",nVetor[nAux]);
-        espera;
       }
   
       nChave=nInd;
@@ -67,11 +61,10 @@ int main(){
   }
   
   else if(nOpc==2){
-    //inserção
+    //inserção - Inserction Sort
     for ( nInd=1; nInd<nPos; nInd++){
       for(nAux=0;nAux<=nPos-1;nAux++){
         printf("[%d]",nVetor[nAux]);
-        espera;
       }
       nChave = nVetor[nInd];
       nAtual = nInd-1;
@@ -86,19 +79,15 @@ int main(){
   }
   
   else if (nOpc==3){
-    //bubble - troca
+    //bubble - troca - Bubble Sort
     nTroca = nPos - 1 ;
-    for(nInd = 0; nInd < nPos; nInd++)
-    {
+    for(nInd = 0; nInd < nPos; nInd++){
       for(nAux=0;nAux<=nPos-1;nAux++){
         printf("[%d]",nVetor[nAux]);
-        espera;
       }
   
-      for(nAtual = 0; nAtual < nTroca; nAtual++)
-      {
-        if(nVetor[nAtual] > nVetor[nAtual+1])
-        {
+      for(nAtual = 0; nAtual < nTroca; nAtual++) {
+        if(nVetor[nAtual] > nVetor[nAtual+1]) {
           nAux = nVetor[nAtual];
           nVetor[nAtual] = nVetor[nAtual+1];
           nVetor[nAtual+1]=nAux;
@@ -107,20 +96,24 @@ int main(){
       nTroca--;
       printf("\n");
     }
+    
+  } else if(nOpc==4){
+    
+    quick_sort(nVetor, nPos);
+
   }
+
   
   //Resultado - Vetor Original
   printf("\nOriginal: ");
   for(nAux=0;nAux<=nPos-1;nAux++){
     printf("[%d]",nOrig[nAux]);
-    espera;
   }
   
   //Resultado - Vetor Ordenado
   printf("\nOrdenada: ");
   for(nAux=0;nAux<=nPos-1;nAux++){
     printf("[%d]",nVetor[nAux]);
-    espera;
   }
   
   //limpando os dados e esperando o usuario apertar -Enter-
@@ -129,4 +122,26 @@ int main(){
   getchar();
 
   return 0;
+}
+
+
+void quick_sort (int *a, int n) {
+    int i, j, p, t;
+    if (n < 2)
+        return;
+    p = a[n / 2];
+    for (i = 0, j = n - 1;; i++, j--) {
+        while (a[i] < p)
+            i++;
+        while (p < a[j])
+            j--;
+        if (i >= j)
+            break;
+        t = a[i];
+        a[i] = a[j];
+        a[j] = t;
+    }
+    quick_sort(a, i);
+    quick_sort(a + i, n - i);
+
 }
