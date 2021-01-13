@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TAM 15
+#define TAM 50
 void localizaCaracter(char *vet, char letra);
 int localizaCaracter2apagar(char *vet, char letra);
 
@@ -26,9 +26,9 @@ int main() {
     printf("\nDigite um caracter ou palavra: ");
     letra = getchar();
 
-    printf("\nPalavra: %s", palavra);
+    printf("\nPalavra: %s ", palavra);
 
-    printf("Quantidade Localizada: %d", localizaCaracter2apagar(palavra, letra));
+    printf("Quantidade Localizada: %d\n", localizaCaracter2apagar(palavra, letra));
     printf("\nPalavra com '%c' retirado: %s", letra, palavra);
     printf("\n\n");
 

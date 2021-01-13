@@ -87,7 +87,7 @@ int main(){
       }
   
       for(nAtual = 0; nAtual < nTroca; nAtual++) {
-        if(nVetor[nAtual] > nVetor[nAtual+1]) {
+        if(nVetor[nAtual] > nVetor[nAtual+1]) { // > para < troca ordem
           nAux = nVetor[nAtual];
           nVetor[nAtual] = nVetor[nAtual+1];
           nVetor[nAtual+1]=nAux;

@@ -163,7 +163,7 @@ void gravacao(int vet[], int qt, char nomeArquivo[]) {
 void leituraImpares(void){
     FILE *arquivo;
     int scan[20];
-    char temp;
+    //char temp;
     int i=0, qt;
     arquivo = fopen("impares.txt", "rt");
     if (arquivo == NULL) {
