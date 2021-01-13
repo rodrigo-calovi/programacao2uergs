@@ -376,9 +376,36 @@ void leArquivoGravaVetor(struct t_agenda aniversariantesAux[]){
 
 void localizar_J(struct t_agenda aniversariantesAux[TAM]){
     
-    char *p;
-    int i;
+    
+    int i,j;
     int qtRegistros = contRegistros();
+    char vetor[100];
+    char *p;
+ 
+    FILE *arquivo;
+    
+    arquivo = fopen("contatos.txt","rt");
+
+        for(j=0;j<qtRegistros;j++){
+
+            i=0;
+        
+            do{ 
+                vetor[i]=getc(arquivo);
+            }while(vetor[i++]!='\n');
+        
+            p = strtok(vetor,";");
+            strcpy(aniversariantesAux[j].nome, p);
+            p = strtok(NULL,";");
+            strcpy(aniversariantesAux[j].telefone, p);
+            p = strtok(NULL,";");
+            aniversariantesAux[j].data.dia = (int)p;
+            p = strtok(NULL,";");
+            aniversariantesAux[j].data.mes = (int)p;
+            
+        }
+
+
     
     for(i=0;i<qtRegistros;i++){
         if(aniversariantesAux[i].nome[0]=='J'){
