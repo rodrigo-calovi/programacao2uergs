@@ -5,7 +5,7 @@
 #define TAM         15                  //definicao
 #define NOME        "Rodrigo Calovi"    //definicao
 #define ABS(x)      (x>0) ? (x) : -(x)  //condicao
-#define mult(x,y)   (x*y)               //funcao
+#define mult(x,y)   (x)*(y)               //funcao
 
 int main(){
     int n1=100, n2=200;
