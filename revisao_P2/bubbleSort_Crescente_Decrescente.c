@@ -8,10 +8,13 @@ void bubbleSortCrescente(int vetor[], int capacity);
 void bubbleSortDescrescente(int vetor[], int capacity);
 void trocaValores(int *var1, int *var2);
 
-int totalTrocas=0;
-int totalComparcacoes=0;
+int totalTrocas;
+int totalComparcacoes;
 
 int main() {
+
+    totalTrocas=0;
+    totalComparcacoes=0;
 
     int vetorA[TAM]={2,5,8,4,15,25,9,18,27,1};
     printf("\n\n [VetorA] [NAO Ordenado]: ");
