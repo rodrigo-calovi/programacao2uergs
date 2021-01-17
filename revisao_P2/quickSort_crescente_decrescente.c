@@ -81,11 +81,11 @@ void quicksortCrescente(int vetor[], int esquerda, int direita){
     meio = vetor[(esquerda+direita)/2];
     
     do{
-        while(vetor[x] < meio && (x < direita)){
+        while((vetor[x] < meio) && (x < direita)){ //sinal (vetor[x] > meio) para decrescente
             x++;
         } 
         
-        while( (meio < vetor[y]) &&  (y > esquerda)) {
+        while( (meio < vetor[y]) &&  (y > esquerda)) { //sinal (meio > vetor[y]) para decrescente
             y--;
         }
         
@@ -121,11 +121,11 @@ void quicksortDecrescente(int vetor[], int esquerda, int direita){
     meio = vetor[(esquerda+direita)/2];
     
     do{
-        while(vetor[x] > meio && (x < direita)){
-            x++;
+        while((vetor[x] > meio) && (x < direita)){ //(vetor[x] > meio)
+            x++; 
         } 
         
-        while( (meio > vetor[y]) &&  (y > esquerda)) {
+        while( (meio > vetor[y]) &&  (y > esquerda)) { //(meio > vetor[y])
             y--;
         }
         
