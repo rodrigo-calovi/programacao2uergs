@@ -1,3 +1,9 @@
+/*
+* Revisao P2
+* Rodrigo Calovi
+* UERGS
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
